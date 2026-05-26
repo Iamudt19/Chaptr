@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300">
+  <rect width="800" height="300" fill="#000000"/>
+  <text 
+    x="400" 
+    y="195" 
+    font-family="'Dancing Script', 'Pacifico', cursive, Georgia" 
+    font-size="160" 
+    font-weight="700"
+    fill="#ffffff" 
+    text-anchor="middle"
+    dominant-baseline="middle"
+    letter-spacing="-2"
+    style="font-style: italic;"
+  >Chaptr</text>
+  <!-- Star/sparkle bottom right -->
+  <path d="M 770 265 L 775 250 L 780 265 L 795 270 L 780 275 L 775 290 L 770 275 L 755 270 Z" fill="#888888"/>
+</svg>
