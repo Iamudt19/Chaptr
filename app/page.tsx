@@ -235,18 +235,18 @@ export default function LandingPage() {
     <div className="min-h-screen text-chaptr-text flex flex-col font-sans">
 
       {/* ── Navbar ─────────────────────────────────────────────────────────── */}
-      <header className={`fixed top-0 left-0 right-0 z-50 px-6 h-20 flex items-center justify-between transition-all duration-500 ease-in-out ${
+      <header className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between transition-all duration-500 ease-in-out ${
         navHidden ? '-translate-y-full opacity-0 pointer-events-none' : 'translate-y-0 opacity-100'
       }`}>
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <LogoWordmark heightClass="h-12 md:h-14" />
+          <LogoWordmark heightClass="h-9 sm:h-11 md:h-14" />
         </Link>
 
         {/* Links and Actions grouped together in top right */}
-        <div className="flex items-center gap-4 md:gap-6">
-          {/* Explore Dropdown Menu */}
-          <div id="explore-dropdown-container" className="relative">
+        <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
+          {/* Explore Dropdown Menu (Hidden on mobile) */}
+          <div id="explore-dropdown-container" className="relative hidden md:block">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold uppercase tracking-wider text-chaptr-muted hover:text-chaptr-text transition-colors bg-chaptr-surface border border-chaptr-border/40 rounded-full shadow-sm hover:shadow-md"
@@ -297,22 +297,22 @@ export default function LandingPage() {
           </div>
 
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <ThemeToggle />
             {!loadingSession && (
               session ? (
                 <button
                   onClick={() => router.push('/dashboard')}
-                  className="flex items-center gap-1.5 px-4 py-2 btn-chaptr-primary text-xs font-bold rounded-[8px]"
+                  className="flex items-center gap-1 px-3 py-2 sm:px-4 sm:py-2 btn-chaptr-primary text-[11px] sm:text-xs font-bold rounded-[8px]"
                 >
                   Dashboard <ArrowRight size={12} />
                 </button>
               ) : (
-                <div className="flex items-center gap-2">
-                  <Link href="/login" className="px-4 py-2 text-xs font-semibold text-chaptr-muted hover:text-chaptr-text transition-colors">
+                <div className="flex items-center gap-1.5 sm:gap-2">
+                  <Link href="/login" className="hidden sm:block px-3 py-2 text-xs font-semibold text-chaptr-muted hover:text-chaptr-text transition-colors">
                     Sign In
                   </Link>
-                  <Link href="/signup" className="px-4 py-2 btn-chaptr-primary text-xs font-bold rounded-[8px]">
+                  <Link href="/signup" className="px-3 py-1.5 sm:px-4 sm:py-2 btn-chaptr-primary text-[11px] sm:text-xs font-bold rounded-[8px] whitespace-nowrap">
                     Get Started
                   </Link>
                 </div>
